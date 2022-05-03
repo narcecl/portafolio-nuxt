@@ -1,0 +1,6 @@
+.fade{
+	&-enter-active, &-leave-active{
+		@include transition;
+	}
+	&-enter, &-leave-to{opacity: 0;}
+}
