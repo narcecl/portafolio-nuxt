@@ -10,7 +10,7 @@
                     <h1>¿Tienes una <mark>idea</mark> en mente? <span>perfecto, yo me encargo del resto</span></h1>
                     <div class="mt-16 w-100 w-sm-90 center">
                         <p>
-                            Mi nombre es <mark>Nicolás Arce</mark>, vivo en Santiago de Chile, soy <mark>Desarrollador Front-end</mark> y especializo en el <mark>Desarrollo de sitios web a medida</mark>, siendo una persona autodidacta, espontánea y muy perfeccionista.
+                            Mi nombre es <mark>Nicolás Arce</mark>, vivo en Santiago de Chile, soy <mark>Desarrollador Front-end</mark> y me especializo en el <mark>Desarrollo web a medida</mark>, siendo una persona autodidacta, espontánea y muy perfeccionista.
                             <br><br>
                             <mark>Desde el 2012</mark> llevo dedicando gran parte de mi tiempo al <mark>Desarrollo web y a Internet</mark>, amando cada cosa de lo que hago, aprendiendo día a día y mejorando constantemente.
                             <br><br>
@@ -54,9 +54,10 @@ export default{
 
 <style lang="scss" scoped>
 	.main-section{
-        height: 100%;
+        height: 100vh;
         background-image: url(~static/main-bg.jpg);
 		background-size: cover;
+        background-attachment: fixed;
 		position: relative;
 
 		> div{position:relative;z-index:1;}

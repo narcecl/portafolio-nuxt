@@ -17,4 +17,4 @@ h1,h2,h3,h4,h5,h6{font-weight: 500;color:#3B3D3F;line-height:1.2em;font-family:'
 p, li, label{font-size:16px;line-height:1.5em;color:#555;}
 mark{font-weight:600;}
 
-html, body, main{height:100vh}
+html, body{height:100vh}

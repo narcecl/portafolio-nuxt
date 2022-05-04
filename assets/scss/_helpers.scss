@@ -10,6 +10,10 @@ body{
 	padding: 80px 0;
 }
 
+.bg{
+	&--secondary{background:#f9f9f9;}
+}
+
 video{max-width:100%;width:100%;height:auto;}
 section{@include transition;}
 

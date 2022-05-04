@@ -1,8 +1,13 @@
 <template>
-	<main>
-		<HomeHero />
-		<HomeAbout />
-	</main>
+	<div>
+		<main>
+			<HomeHero />
+			<HomeAbout />
+			<HomeProjects />
+		</main>
+
+		<AppFooter />
+	</div>
 </template>
 
 <script>
