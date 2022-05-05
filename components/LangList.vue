@@ -18,6 +18,10 @@ export default {
                 case 'Nuxt':
                 case 'NuxtJS':
                     return 'nuxt';
+                case 'HTML5':
+                    return 'html';
+                case 'CSS3':
+                    return 'css';
             }
         }
     }
@@ -28,11 +32,11 @@ export default {
 .lang-list{
     li{
         display: inline-block;
-        font-size: 11px;
-        border: 1px solid #eee;
+        font-size: 10px;
         border-radius: 8px;
-        padding: 2px 12px;
-        margin-right: 8px;
+        padding: 2px 8px;
+        margin-right: 6px;
+        background: #eee;
 
         &:last-of-type{margin-right:0;}
 

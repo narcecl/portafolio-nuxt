@@ -18,16 +18,8 @@
                         </p>
                     </div>
 
-                    <div v-if="socials.length" class="sociales mt-32">
-                        <ul>
-                            <li v-for="(item, index) in socials" :key="index">
-                                <a :href="item.href">
-                                    <figure>
-                                        <img width="36" height="36" :alt="item.name" :src="item.icon">
-                                    </figure>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="sociales mt-32">
+                        <AppSocial />
                     </div>
                 </div>
             </div>
@@ -37,18 +29,7 @@
 
 <script>
 export default{
-    name: 'HomeHero',
-    data: () => {
-		return {
-			socials: [
-				{name: 'Email', href: 'mailto:hola@narce.cl', icon: 'https://icongr.am/fontawesome/envelope-square.svg?size=36&color=ffffff'},
-				{name: 'Facebook', href: 'https://www.facebook.com/narcecl/', icon: 'https://icongr.am/fontawesome/facebook-square.svg?size=36&color=ffffff'},
-				{name: 'Twitter', href: 'https://twitter.com/narcecl', icon: 'https://icongr.am/fontawesome/twitter-square.svg?size=36&color=ffffff'},
-				{name: 'LinkedIn', href: 'https://www.linkedin.com/in/narcecl/', icon: 'https://icongr.am/fontawesome/linkedin-square.svg?size=36&color=ffffff'},
-				{name: 'GitHub', href: 'https://github.com/narcecl', icon: 'https://icongr.am/fontawesome/github-square.svg?size=36&color=ffffff'}
-			]
-		};
-	}
+    name: 'HomeHero'
 }
 </script>
 
@@ -85,22 +66,6 @@ export default{
 		p{
 			color:rgba(255,255,255,.8);
 			mark{color:#fff;}
-		}
-
-		.sociales{
-			ul{
-				li{
-					display: inline-block;
-					margin-right: 32px;
-					vertical-align: middle;
-					@include transition;
-
-					a{font-size:36px;color:#fff;}
-
-					&:hover{opacity:.5}
-					&:last-of-type{margin-right:0;}
-				}
-			}
 		}
 	}
 </style>

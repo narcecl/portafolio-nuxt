@@ -45,8 +45,13 @@ section{@include transition;}
 figure{
 	margin:0;
 	padding:0;
+
 	&.full{
 		img, canvas{width:100%;display:block;height:auto;}
+	}
+	&.rounded{
+		border-radius: 8px;
+		overflow: hidden;
 	}
 	img, canvas{max-width:100%;height:auto;}
 }
