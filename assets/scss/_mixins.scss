@@ -1,3 +1,5 @@
+// Global SCSS Mixins
+
 @mixin transition($property: all, $time: .3s, $timing: ease){
 	-webkit-transition: $property $time $timing;
 	-moz-transition: $property $time $timing;

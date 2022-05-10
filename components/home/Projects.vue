@@ -1,40 +1,55 @@
 <template>
     <section class="section bg--secondary">
         <div class="container">
-            <h2 class="heading--3 mb-8">Mis <mark>proyectos</mark></h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ut. Illo vitae nisi necessitatibus consectetur amet nihil sed. Consequatur voluptatum sint tempore distinctio sequi quo ea, quae nemo perspiciatis deleniti!</p>
+            <div v-viewport data-animation="fadeInDown" class="section__heading inanimate mb-48">
+                <h2 class="heading--3 mb-8">Mis <mark>proyectos</mark></h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ut. Illo vitae nisi necessitatibus consectetur amet nihil sed. Consequatur voluptatum sint tempore distinctio sequi quo ea, quae nemo perspiciatis deleniti!</p>
+            </div>
 
-            <div class="mt-48">
-                <div class="row total">
-                    <div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-4">
-                        <div class="project">
-                            <figure class="full project__image">
-                                <img :src="project.image" :alt="project.name">
-                            </figure>
-                            <div class="project__info mt-16">
-                                <div class="project__info__lang mb-20">
-                                    <LangList :langs="project.langs" />
-                                </div>
+            <div v-viewport class="row total fade-child">
+                <div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-4 child">
+                    <div class="project">
+                        <figure class="full project__image">
+                            <img :src="project.image" :alt="project.name">
+                        </figure>
+                        <div class="project__info mt-16">
+                            <h3 class="heading--6 fw--bold mb-4" v-text="project.name"></h3>
+                            <div class="project__info__lang mt-8 mb-24">
+                                <LangList :langs="project.langs" />
+                            </div>
 
-                                <h3 class="heading--6 fw--bold" v-text="project.name"></h3>
-                                <p v-text="project.description"></p>
+                            <p class="project__info__desc f--small" v-text="project.description"></p>
 
-                                <div class="project__info__actions">
-                                    <div class="btn--holder d-flex">
-                                        <AppButton 
-                                            v-for="(button, i) in project.links"
-                                            :key="i" :href="button.url"
-                                            :type="button.type"
-                                            :text="button.text"
-                                            :full="button.full"
-                                            :icon="button.icon"
-                                            :iconOrder="button.iconOrder"
-                                        />
-                                    </div>
+                            <div class="project__info__actions">
+                                <div class="btn--holder d-flex">
+                                    <AppButton 
+                                        v-for="(button, bi) in project.links"
+                                        :key="bi" :href="button.url"
+                                        :type="button.type"
+                                        :text="button.text"
+                                        :full="button.full"
+                                        :icon="button.icon"
+                                        :icon-order="button.iconOrder"
+                                    />
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="click-to-action mt-48">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="click-to-action__icon d-flex align-items-center justify-content-center mr-8">
+                            <span class="fas fa-mug-hot color--regular"></span>
+                        </div>
+                        <div class="click-to-action__content">
+                            <h3 class="text-uppercase fw--bold">¿Te gusta o te ha servido mi trabajo?</h3>
+                            <p class="f--small">Estoy regularmente desarrollando aplicaciones, snippets o componentes.</p>
+                        </div>
+                    </div>
+                    <a href="https://ko-fi.com/narcecl" class="link--regular" target="_blank">Regalame un café</a>
                 </div>
             </div>
         </div>
@@ -49,7 +64,7 @@ export default {
             projects: [
                 {
                     name: 'Portafolio 2022',
-                    description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae minima.',
+                    description: 'Desarrollo de portafolio personal en NuxtJS.',
                     image: 'https://via.placeholder.com/350x200',
                     langs: ['Nuxt', 'Vue', 'HTML5', 'CSS3'],
                     links: [{type: 'github', text: 'Ver en Github', url: '#', full: true, icon: 'fa-code'}]
@@ -88,15 +103,36 @@ export default {
         &__info{
             padding: 0 8px;
 
+            &__desc{
+                min-height: 42px;
+            }
+
             &__actions{
-                margin-top: 24px;
-                padding-top: 24px;
-                border-top: 1px solid #eee;
+                margin-top: 32px;
 
                 a{
                     + a{margin-left: 8px;}
                 }
             }
+        }
+    }
+
+    .click-to-action{
+        padding: 20px 24px;
+        background: rgba($primary-color, .1);
+        // border: 2px solid rgba($primary-color, .2);
+        border-radius: 8px;
+        
+        &__icon{
+            width: 42px;
+            height: 42px;
+            display: block;
+            padding: 8px;
+            margin-right: 12px;
+            border-radius: 100%;
+            background: rgba($primary-color, .7);
+
+            span{font-size: 20px;color:#fff;}
         }
     }
 </style>

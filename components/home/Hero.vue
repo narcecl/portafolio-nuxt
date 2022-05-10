@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="sociales mt-32">
-                        <AppSocial />
+                        <AppSocial theme="light" icon-type="square" />
                     </div>
                 </div>
             </div>
@@ -46,7 +46,7 @@ export default{
 
 		h1{
             font-size: 38px;
-            line-height: 1.2em;
+            line-height: 1.1em;
             max-width: 90%;
             margin: 0 auto;
 			color:#fff;

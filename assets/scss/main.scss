@@ -1,4 +1,10 @@
+// Base SCSS file
+
+// ** _reset.css is included in nuxt.config.js as css (called globally)
+// ** _variables and _mixins are included in nuxt.config.js as styleResources (compiled and called globally)
+
 @import "./_helpers.scss";
 @import "./_grid.scss";
 @import "./_fonts.scss";
+@import "./_backgrounds.scss";
 @import "./_animations.scss";

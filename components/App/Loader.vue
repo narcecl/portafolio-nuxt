@@ -10,6 +10,7 @@
 
 <script>
 export default {
+	name: 'AppLoader',
 	data: () => {
 		return {
 			loading: true
@@ -28,18 +29,18 @@ export default {
 
 <style lang="scss" scoped>
 	.loading{
-		position:fixed;
-		left:0;
-		top:0;
-		width:100%;
-		height:100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
 		z-index: 99999;
 		background:#fff;
 		
 		.sk-cube-grid{
-			width:70px;
-			height:70px;
-			margin:0 auto;
+			width: 70px;
+			height: 70px;
+			margin: 0 auto;
 
 			.sk-cube{
 				width:33%;

@@ -1,3 +1,6 @@
+// Global Helpers
+//
+
 @use "sass:math";
 
 body{
@@ -10,8 +13,15 @@ body{
 	padding: 80px 0;
 }
 
-.bg{
-	&--secondary{background:#f9f9f9;}
+.link{
+	&--regular{
+		color: $primary-color;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
 }
 
 video{max-width:100%;width:100%;height:auto;}
@@ -66,28 +76,28 @@ figure{
 	&-center{text-align:center !important}
 	&-justify{text-align:justify !important}
 
-	@media ( min-width: $break-sm ){
+	@media (min-width: $break-sm){
 		&-sm-left{text-align: left !important}
 		&-sm-right{text-align: right !important}
 		&-sm-center{text-align:center !important}
 		&-sm-justify{text-align:justify !important}
 	}
 
-	@media ( min-width: $break-md ){
+	@media (min-width: $break-md){
 		&-md-left{text-align: left !important}
 		&-md-right{text-align: right !important}
 		&-md-center{text-align:center !important}
 		&-md-justify{text-align:justify !important}
 	}
 
-	@media (min-width: $break-lg ){
+	@media (min-width: $break-lg){
 		&-lg-left{text-align: left !important}
 		&-lg-right{text-align: right !important}
 		&-lg-center{text-align:center !important}
 		&-lg-justify{text-align:justify !important}
 	}
 
-	@media (min-width: $break-xl ){
+	@media (min-width: $break-xl){
 		&-xl-left{text-align: left !important}
 		&-xl-right{text-align: right !important}
 		&-xl-center{text-align:center !important}
@@ -128,7 +138,16 @@ figure{
 .visible{visibility: visible;}
 .invisible{visibility: hidden;}
 
+// Fuentes
 $max: 100;
+$step: 2;
+@for $i from 2 through ceil(math.div($max, $step)){
+	$value: $i * $step;
+	.f-#{$value}{ font-size:#{$value}px; }
+}
+
+$max: 100;
+$pm_max: 60;
 $step_4: 4;
 $step_5: 5;
 $step_10: 10;
@@ -142,17 +161,6 @@ $step_10: 10;
 	.h-#{$value}{height: 0% + $value}
 }
 
-@for $i from 0 through ceil(math.div(200, $step_10)) {
-	$value: $i * $step_10;
-	.h-#{$value}-px{height:#{$value}px}
-}
-
-$step_2: 2;
-@for $i from 0 through ceil(math.div(16, $step_2)) {
-	$value: $i * $step_2;
-	.radius-#{$value}{border-radius: #{$value}px}
-}
-
 // Margenes / Paddings
 .py-0{padding-top:0 !important;padding-bottom: 0 !important;}
 .px-0{padding-left:0 !important;padding-right: 0 !important;}
@@ -161,7 +169,7 @@ $step_2: 2;
 .my-0{margin-top:0 !important;margin-bottom: 0 !important;}
 .mx-0{margin-left:0 !important;margin-right: 0 !important;}
 
-@for $i from 0 through ceil( math.div($max, $step_4) ){
+@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
 	$value: $i * $step_4;
 	// Padding
 	.py-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
@@ -191,7 +199,7 @@ $step_2: 2;
 	.my-sm-0{margin-top:0;margin-bottom: 0;}
 	.mx-sm-0{margin-left:0;margin-right: 0;}
 
-	@for $i from 0 through ceil( math.div($max, $step_4) ){
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
 		$value: $i * $step_4;
 		// Padding
 		.py-sm-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
@@ -229,7 +237,7 @@ $step_2: 2;
 	.my-md-0{margin-top:0;margin-bottom: 0;}
 	.mx-md-0{margin-left:0;margin-right: 0;}
 
-	@for $i from 0 through ceil( math.div($max, $step_4) ){
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
 		$value: $i * $step_4;
 		// Padding
 		.py-md-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
@@ -267,7 +275,7 @@ $step_2: 2;
 	.my-lg-0{margin-top:0;margin-bottom: 0;}
 	.mx-lg-0{margin-left:0;margin-right: 0;}
 
-	@for $i from 0 through ceil( math.div($max, $step_4) ){
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
 		$value: $i * $step_4;
 		// Padding
 		.py-lg-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
@@ -305,7 +313,7 @@ $step_2: 2;
 	.my-xl-0{margin-top:0;margin-bottom: 0;}
 	.mx-xl-0{margin-left:0;margin-right: 0;}
 
-	@for $i from 0 through ceil( math.div($max, $step_4) ){
+	@for $i from 0 through ceil( math.div($pm_max, $step_4) ){
 		$value: $i * $step_4;
 		// Padding
 		.py-xl-#{$value}{ padding-top: #{$value}px; padding-bottom: #{$value}px; }
