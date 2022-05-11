@@ -1,5 +1,5 @@
 <template>
-    <section class="section bg--secondary">
+    <section class="section">
         <div class="container">
             <div v-viewport data-animation="fadeInDown" class="section__heading inanimate mb-48">
                 <h2 class="heading--3 mb-8">Mis <mark>proyectos</mark></h2>
@@ -12,12 +12,11 @@
                         <figure class="full project__image">
                             <img :src="project.image" :alt="project.name">
                         </figure>
-                        <div class="project__info mt-16">
-                            <h3 class="heading--6 fw--bold mb-4" v-text="project.name"></h3>
-                            <div class="project__info__lang mt-8 mb-24">
+                        <div class="project__info mt-12">
+                            <div class="project__info__lang mb-24">
                                 <LangList :langs="project.langs" />
                             </div>
-
+                            <h3 class="heading--6 fw--bold mb-4" v-text="project.name"></h3>
                             <p class="project__info__desc f--small" v-text="project.description"></p>
 
                             <div class="project__info__actions">
@@ -38,20 +37,17 @@
                 </div>
             </div>
 
-            <div class="click-to-action mt-48">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div class="d-flex align-items-center">
-                        <div class="click-to-action__icon d-flex align-items-center justify-content-center mr-8">
-                            <span class="fas fa-mug-hot color--regular"></span>
-                        </div>
-                        <div class="click-to-action__content">
-                            <h3 class="text-uppercase fw--bold">¿Te gusta o te ha servido mi trabajo?</h3>
-                            <p class="f--small">Estoy regularmente desarrollando aplicaciones, snippets o componentes.</p>
-                        </div>
-                    </div>
-                    <a href="https://ko-fi.com/narcecl" class="link--regular" target="_blank">Regalame un café</a>
-                </div>
-            </div>
+            <AppClickToAction
+                class="mt-48"
+                title="¿Te gusta o te ha servido mi trabajo?"
+                description="Estoy constantemente desarrollando aplicaciones, snippets o componentes (generalmente en Vue)."
+                icon="fa-thumbs-up"
+            >
+                <a href="https://ko-fi.com/narcecl" class="link--regular f-14" target="_blank">
+                    Regalame un café
+                    <i class="fa-solid fa-mug-hot ml-8" aria-hidden="true"></i>
+                </a>
+            </AppClickToAction>
         </div>
     </section>
 </template>
@@ -90,49 +86,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .project{
-        padding: 12px;
-        border-radius: 8px;
-        background: #fff;
+.project{
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #eee;
 
-        &__image{
-            border-radius: 8px;
-            overflow: hidden;
+    &__image{
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    &__info{
+        padding: 0 8px;
+
+        &__desc{
+            min-height: 42px;
         }
 
-        &__info{
-            padding: 0 8px;
+        &__actions{
+            margin-top: 32px;
 
-            &__desc{
-                min-height: 42px;
-            }
-
-            &__actions{
-                margin-top: 32px;
-
-                a{
-                    + a{margin-left: 8px;}
-                }
+            a{
+                + a{margin-left: 8px;}
             }
         }
     }
-
-    .click-to-action{
-        padding: 20px 24px;
-        background: rgba($primary-color, .1);
-        // border: 2px solid rgba($primary-color, .2);
-        border-radius: 8px;
-        
-        &__icon{
-            width: 42px;
-            height: 42px;
-            display: block;
-            padding: 8px;
-            margin-right: 12px;
-            border-radius: 100%;
-            background: rgba($primary-color, .7);
-
-            span{font-size: 20px;color:#fff;}
-        }
-    }
+}
 </style>

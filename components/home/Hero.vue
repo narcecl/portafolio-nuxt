@@ -1,5 +1,5 @@
 <template>
-    <section class="main-section">
+    <section class="hero-section">
         <div class="d-flex align-items-center justify-content-center h-100">
             <div class="container">
                 <div class="w-100 w-sm-80 text-center center">
@@ -12,8 +12,6 @@
                         <p>
                             Mi nombre es <mark>Nicolás Arce</mark>, vivo en Santiago de Chile, soy <mark>Desarrollador Front-end</mark> y me especializo en el <mark>Desarrollo web a medida</mark>, siendo una persona autodidacta, espontánea y muy perfeccionista.
                             <br><br>
-                            <mark>Desde el 2012</mark> llevo dedicando gran parte de mi tiempo al <mark>Desarrollo web y a Internet</mark>, amando cada cosa de lo que hago, aprendiendo día a día y mejorando constantemente.
-                            <br><br>
                             Escríbeme a través de mis redes sociales para saber más de mi o simplemente saludarme :)
                         </p>
                     </div>
@@ -24,17 +22,38 @@
                 </div>
             </div>
         </div>
+
+        <div v-scrollto="'#home-about'" class="scroll-down">
+            <transition name="fade">
+                <p v-if="timeout">Haz scroll para ver más contenido abajo.</p>
+            </transition>
+            <i class="d-inline-block animated animated__infinite animate__bounce fa-solid fa-chevron-down" aria-label="Ir a la siguiente sección"></i>
+        </div>
     </section>
 </template>
 
 <script>
 export default{
-    name: 'HomeHero'
+    name: 'HomeHero',
+    data: function(){
+        return {
+            timeout: false
+        };
+    },
+    mounted: function(){
+        const scrollTimer = setTimeout(() => {
+            this.timeout = true;
+        }, 5000);
+
+        document.addEventListener('scroll', () => {
+            clearTimeout(scrollTimer);
+        });
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-	.main-section{
+	.hero-section{
         height: 100vh;
         background-image: url(~static/main-bg.jpg);
 		background-size: cover;
@@ -67,5 +86,30 @@ export default{
 			color:rgba(255,255,255,.8);
 			mark{color:#fff;}
 		}
+
+        .scroll-down{
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 20px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+
+            p{
+                width: 280px;
+                position: absolute;
+                left: -120px;
+                top: -52px;
+                margin: auto;
+                font-size: 14px;
+            }
+
+            i{
+                font-size: 24px;
+                color: #fff;
+            }
+        }
 	}
 </style>

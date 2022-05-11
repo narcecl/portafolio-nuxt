@@ -3,6 +3,7 @@
 		<main>
 			<HomeHero />
 			<HomeAbout />
+			<HomeExperience />
 			<HomeProjects />
 		</main>
 

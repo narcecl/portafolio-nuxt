@@ -4,7 +4,7 @@
             <div class="row total align-items-center">
                 <div class="col-12 col-sm-6">
                     <p class="f--small d-flex align-items-center">
-                        <span class="fa fa-heart mr-12 animated animate__heartBeat animated__infinite"></span>
+                        <span class="fa fa-heart mr-12 animated animate__heartBeat animated__infinite" aria-hidden="true"></span>
                         Desarrollado con amor por <mark class="d-block ml-4">Nicolás Arce</mark>.
                     </p>
                 </div>
