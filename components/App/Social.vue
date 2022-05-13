@@ -1,7 +1,7 @@
 <template>
     <ul class="socials" :class="`socials--${theme} socials--${size}`">
         <li v-for="(item, index) in socials" :key="index">
-            <a :href="item.href" :aria-label="`Sigueme en ${item.name}`">
+            <a :href="item.href" :aria-label="`Sigueme en ${item.name}`" target="_blank">
                 <span :class="item.icons[iconType]" aria-hidden="true"></span>
             </a>
         </li>
@@ -16,7 +16,7 @@ export default{
         size: {type: String, default: 'md'},
         iconType: {type: String, default: 'rounded'}
     },
-    data: () => {
+    data: function(){
 		return {
 			socials: [
 				// {name: 'Email', href: 'mailto:hola@narce.cl', icons: {square: 'fa-solid fa-square-envelope', rounded: 'fa-solid fa-envelope'}},

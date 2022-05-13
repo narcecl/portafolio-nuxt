@@ -3,11 +3,11 @@
         <div class="d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center w-100 w-sm-80">
                 <div class="click-to-action__icon d-flex align-items-center justify-content-center">
-                    <span class="fa-solid color--regular" :class="icon" aria-hidden="true"></span>
+                    <span :class="icon" class="fa-solid color--regular" aria-hidden="true"></span>
                 </div>
                 <div class="click-to-action__content">
-                    <h3 v-if="title" v-text="title" class="text-uppercase fw--bold"></h3>
-                    <p v-if="description" v-text="description" class="f--small"></p>
+                    <h3 v-if="title" class="text-uppercase fw--bold" v-text="title"></h3>
+                    <p v-if="description" class="f--small" v-text="description"></p>
                 </div>
             </div>
             <slot></slot>
