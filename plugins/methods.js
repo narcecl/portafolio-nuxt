@@ -16,14 +16,11 @@ export default {
 
 	scrollTo: function(elementName){
 		if( elementName === '#' ) return false;
+
 		const element = document.querySelector(elementName) || document.getElementById(elementName);
 
-		if( element ){
-			this.smoothScroll(element);
-		}
-		else{
-			console.error('scrollTo: elemento no encontrado.');
-		}
+		if( element ) this.smoothScroll(element);
+		else console.error('scrollTo: elemento no encontrado.');
 	},
 
     getOffset: function( element ){
@@ -32,7 +29,6 @@ export default {
 		while( element ){
 			offset.top += element.offsetTop;
 			offset.left += element.offsetLeft;
-
 			element = element.offsetParent;
 		}
 

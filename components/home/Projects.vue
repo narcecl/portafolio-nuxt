@@ -3,7 +3,11 @@
         <div class="container">
             <div v-viewport data-animation="fadeInDown" class="section__heading inanimate mb-48">
                 <h2 class="heading--3 mb-8">Mis <mark>proyectos</mark></h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ut. Illo vitae nisi necessitatibus consectetur amet nihil sed. Consequatur voluptatum sint tempore distinctio sequi quo ea, quae nemo perspiciatis deleniti!</p>
+                <p>
+                    Parte de mi tiempo libre lo dedico a desarrollar aplicaciones y componentes para la web. Aquí podrás ver en los que estoy trabajando ahora.
+                    <br>
+                    Puedes ver todos mis desarrollos en mi perfil de <a href="https://github.com/narcecl" target="_blank" rel="noreferrer noopener" class="link--regular">GitHub</a>.
+                </p>
             </div>
 
             <div v-viewport class="row total fade-child">
@@ -23,6 +27,7 @@
                                 <div class="btn--holder d-flex">
                                     <AppButton 
                                         v-for="(button, bi) in project.links"
+                                        target="_blank"
                                         :key="bi" :href="button.url"
                                         :type="button.type"
                                         :text="button.text"
@@ -38,14 +43,14 @@
             </div>
 
             <AppClickToAction
-                class="mt-48"
+                class="mt-60"
                 title="¿Te gusta o te ha servido mi trabajo?"
                 description="Estoy constantemente desarrollando aplicaciones, snippets o componentes (generalmente en Vue)."
-                icon="fa-thumbs-up"
+                icon="fa-mug-hot"
             >
-                <a href="https://ko-fi.com/narcecl" class="link--regular f-14" target="_blank">
+                <a href="https://ko-fi.com/narcecl" class="link--regular fw--bold f-14" rel="noreferrer noopener" target="_blank">
                     Regalame un café
-                    <i class="fa-solid fa-mug-hot ml-8" aria-hidden="true"></i>
+                    <i class="fa-solid fa-chevron-right ml-8" aria-hidden="true"></i>
                 </a>
             </AppClickToAction>
         </div>
@@ -62,22 +67,22 @@ export default {
                     name: 'Portafolio 2022',
                     description: 'Desarrollo de portafolio personal en NuxtJS.',
                     image: 'https://via.placeholder.com/350x200',
-                    langs: ['Nuxt', 'Vue', 'HTML5', 'CSS3'],
-                    links: [{type: 'github', text: 'Ver en Github', url: '#', full: true, icon: 'fa-code'}]
+                    langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
+                    links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/portafolio-nuxt', full: true, icon: 'fa-code'}]
                 },
                 {
                     name: 'Grids Planner',
                     description: 'Una aplicación para poder organizar visualmente el feed de Instagram.',
                     image: 'https://via.placeholder.com/350x200',
-                    langs: ['Vue', 'HTML5', 'CSS3'],
-                    links: [{type: 'github', text: '', url: '#', icon: 'fa-code'}, {type: 'primary', text: 'Ir al proyecto', url: '#', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}]
+                    langs: ['VUE', 'HTML5', 'CSS3'],
+                    links: [{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'fa-code'}, {type: 'primary', text: 'Ir al proyecto', url: '#', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}]
                 },
                 {
                     name: 'Vue Accesibilidad',
                     description: 'Un componente para aplicar accesibilidad visual en la web.',
                     image: 'https://via.placeholder.com/350x200',
-                    langs: ['Vue', 'HTML5', 'CSS3'],
-                    links: [{type: 'github', text: 'Ver en Github', url: '#', full: true, icon: 'fa-code'}]
+                    langs: ['VUE', 'HTML5', 'CSS3'],
+                    links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/vue-accesibilidad', full: true, icon: 'fa-code'}]
                 }
             ]
         };

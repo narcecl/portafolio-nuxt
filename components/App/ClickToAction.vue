@@ -25,7 +25,6 @@ export default {
     },
     data: function(){
         return {
-
         };
     }
 }
@@ -34,9 +33,12 @@ export default {
 <style lang="scss" scoped>
 .click-to-action{
     padding: 20px 24px;
-    background: rgba($primary-color, .1);
-    // border: 2px solid rgba($primary-color, .2);
+    background: rgba($primary-color, .15);
     border-radius: 8px;
+
+    .link--regular{
+        color: #555 !important;
+    }
     
     &__icon{
         width: 42px;
@@ -47,7 +49,10 @@ export default {
         border-radius: 100%;
         background: rgba($primary-color, .7);
 
-        span{font-size: 20px;color:#fff;}
+        span{
+            font-size: 20px;
+            color:#fff;
+        }
     }
 }
 </style>

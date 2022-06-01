@@ -1,9 +1,9 @@
 export const state = () => ({
-	counter: 0
+	loading: true
 });
-  
+
 export const mutations = {
-	increment(state) {
-		state.counter++
+	setLoading(state, value) {
+		state.loading = value;
 	}
 }

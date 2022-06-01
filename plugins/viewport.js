@@ -1,7 +1,7 @@
 import Vue from 'vue';
 
 Vue.directive('viewport', {
-	inserted: (el, binding) => {
+	inserted: (el, binding, vnode) => {
 		// Lista de eventos para ejecutar la función
 		const events = ['DOMContentLoaded', 'resize', 'scroll'];
 		const isInViewport = () => {
@@ -92,7 +92,12 @@ Vue.directive('viewport', {
 			handleEvent();
 		};
 
-		// Iniciamos
-		init();
+		const loaded = setInterval(() => {
+			if( vnode.context.$store.state.loading ){
+				// Esperamos a que el loader finalice para iniciar
+				clearInterval(loaded);
+				init();
+			}
+		}, 100);
 	}
 });

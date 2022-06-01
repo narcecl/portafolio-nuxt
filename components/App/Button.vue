@@ -1,5 +1,5 @@
 <template>
-    <a class="btn" :class="[`btn--${type}`, classController]">
+    <a class="btn" :class="[`btn--${type}`, classController]" :aria-label="text ? text : 'Button'">
         <span v-if="icon" :class="`btn__icon fa-solid ${icon} order-${iconOrder} ${text ? 'hm' : ''}`" aria-hidden="true"></span>
         {{ text }}
     </a>
@@ -36,19 +36,20 @@ export default {
     font-size: 12px;
     align-items: center;
     justify-content: center;
+    font-weight: 600;
     @include transition;
 
     &__icon{
         &.hm{
-            &.order-0{margin-right: 8px;}
-            &.order-2{margin-left: 8px;}
+            &.order-0{margin-right: 12px;}
+            &.order-2{margin-left: 12px;}
         }
     }
 
     &--full{width:100%;}
 
     &--github{
-        background:#8C949F;
+        background:#5C646F;
         color:#fff;
 
         &:hover{
@@ -57,7 +58,7 @@ export default {
     }
 
     &--primary{
-        background:#2481c2;
+        background: $primary-color;
         color:#fff;
 
         &:hover{

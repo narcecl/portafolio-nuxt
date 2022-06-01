@@ -14,9 +14,11 @@ export default {
         getTheme: function(lang){
             switch(lang){
                 case 'Vue':
+                case 'VUE':
                     return 'vue';
                 case 'Nuxt':
                 case 'NuxtJS':
+                case 'NUXT JS':
                     return 'nuxt';
                 case 'HTML5':
                     return 'html';
@@ -36,19 +38,30 @@ export default {
         border-radius: 8px;
         padding: 2px 8px;
         margin-right: 6px;
-        background: #eee;
+        border: 1px solid #eee;
+        letter-spacing: .2px;
+        font-weight: 600;
 
         &:last-of-type{margin-right:0;}
 
         &.vue{
-            background: #42b883;
-            border-color: #42b883;
-            color: #fff;
+            background: rgba(#42b883, .15);
+            border-color: rgba(#42b883, .2);
         }
 
         &.nuxt{
-            background: #00dc82;
-            border-color: #00dc82;
+            background: rgba(#00dc82, .15);
+            border-color: rgba(#00dc82, .2);
+        }
+
+        &.html{
+            background: rgba(#e25123, .2);
+            border-color: rgba(#e25123, .1);
+        }
+
+        &.css{
+            background: rgba(#0c73b8, .2);
+            border-color: rgba(#0c73b8, .1);
         }
     }
 }

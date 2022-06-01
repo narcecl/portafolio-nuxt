@@ -1,7 +1,7 @@
 <template>
     <ul class="socials" :class="`socials--${theme} socials--${size}`">
         <li v-for="(item, index) in socials" :key="index">
-            <a :href="item.href" :aria-label="`Sigueme en ${item.name}`" target="_blank">
+            <a :href="item.href" :aria-label="`Sigueme en ${item.name}`" :title="`Sigueme en ${item.name}`" target="_blank" rel="noreferrer noopener">
                 <span :class="item.icons[iconType]" aria-hidden="true"></span>
             </a>
         </li>

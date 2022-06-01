@@ -3,7 +3,7 @@ export default {
 	loading: '~/components/App/Loader.vue',
 
 	// Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-	ssr: false,
+	ssr: true,
 
 	// Target: https://go.nuxtjs.dev/config-target
 	target: 'static',
@@ -14,7 +14,7 @@ export default {
 		meta: [
 			{ charset: 'utf-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
+			{ hid: 'description', name: 'description', content: 'Mi nombre es Nicolás Arce, vivo en Santiago de Chile y me especializo en el Desarrollo de sitios web a medida, siendo una persona autodidacta, espontánea y muy perfeccionista.' },
 			{ name: 'format-detection', content: 'telephone=no' },
 		],
 		link: [

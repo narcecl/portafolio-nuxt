@@ -19,9 +19,11 @@ export default {
 	methods: {
     	start: function(){
 			this.loading = true;
+			this.$store.commit('setLoading', true);
 		},
 		finish: function(){
-			this.loading = false
+			this.loading = false;
+			this.$store.commit('setLoading', false);
 		}
 	}
 }

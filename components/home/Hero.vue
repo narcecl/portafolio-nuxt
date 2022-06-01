@@ -2,7 +2,7 @@
     <section class="hero-section">
         <div class="d-flex align-items-center justify-content-center h-100">
             <div class="container">
-                <div class="w-100 w-sm-80 text-center center">
+                <div v-viewport data-animation="fadeInDown" class="w-100 w-sm-80 text-center center">
                     <figure class="mb-60">
                         <img src="~static/narce-logo.png" alt="Nicolás Arce" width="215" height="29">
                     </figure>
@@ -27,7 +27,7 @@
             <transition name="fade">
                 <p v-if="timeout">Haz scroll para ver más contenido abajo.</p>
             </transition>
-            <i class="d-inline-block animated animated__infinite animate__bounce fa-solid fa-chevron-down" aria-label="Ir a la siguiente sección"></i>
+            <i class="d-inline-block animated animated__infinite animate__bounce fa-solid fa-chevron-down" aria-hidden="true" title="Ir a la siguiente sección"></i>
         </div>
     </section>
 </template>
