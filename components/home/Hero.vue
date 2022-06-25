@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="w-100 w-sm-80 text-center center">
                     <figure v-viewport data-animation="fadeInDown" data-delay="300" class="hidden-caption mb-60">
-                        <nuxt-img src="/images/narce-logo.png" alt="Logo Nicolás Arce" width="215" height="29" />
+                        <nuxt-img src="/images/narce-logo.png" alt="Logo Nicolás Arce" width="260" height="31.5" loading="lazy" />
                         <figcaption>Isologo Nicolás Arce</figcaption>
                     </figure>
 

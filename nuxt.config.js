@@ -87,6 +87,8 @@ export default {
 	pwa: {
 		manifest: {
 			lang: 'es',
+			name: 'Portafolio Nicolás Arce',
+			theme_color: '#12181f'
 		},
 	},
 
