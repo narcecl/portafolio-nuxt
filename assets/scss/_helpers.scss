@@ -24,8 +24,15 @@ body{
 	}
 }
 
-video{max-width:100%;width:100%;height:auto;}
-section{@include transition;}
+video{
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+section{
+	@include transition;
+}
 
 .iframe-container{
 	position: relative;
@@ -55,6 +62,10 @@ section{@include transition;}
 figure{
 	margin:0;
 	padding:0;
+
+	&.hidden-caption{
+		figcaption{display: none;}
+	}
 
 	&.full{
 		img, canvas{width:100%;display:block;height:auto;}

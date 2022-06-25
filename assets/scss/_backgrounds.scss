@@ -1,5 +1,11 @@
 // Definitions of backgrounds
 
 .bg{
-	&--secondary{background:#fafafa;}
+	&--secondary{background: #fafafa;}
+}
+
+.dark{
+	.bg{
+		&--secondary{background: #181818;}
+	}
 }

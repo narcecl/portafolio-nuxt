@@ -10,9 +10,15 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
+		htmlAttrs: {
+			lang: 'es'
+		},
+		bodyAttrs: {
+			// class: ['dark-mode', 'mobile']
+		},
 		title: 'Nicolás Arce | Front-end Developer',
 		meta: [
-			{ charset: 'utf-8' },
+			{ charset: 'UTF-8' },
 			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
 			{ hid: 'description', name: 'description', content: 'Mi nombre es Nicolás Arce, vivo en Santiago de Chile y me especializo en el Desarrollo de sitios web a medida, siendo una persona autodidacta, espontánea y muy perfeccionista.' },
 			{ name: 'format-detection', content: 'telephone=no' },
@@ -48,8 +54,14 @@ export default {
 	buildModules: [
 		// https://go.nuxtjs.dev/eslint
 		'@nuxtjs/eslint-module',
-		'@nuxtjs/style-resources'
+		'@nuxtjs/style-resources',
+		'@nuxt/image',
+		'@unlighthouse/nuxt',
 	],
+
+	image: {
+		domains: ['via.placeholder.com']
+	},
 
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
@@ -68,7 +80,7 @@ export default {
 	// PWA module configuration: https://go.nuxtjs.dev/pwa
 	pwa: {
 		manifest: {
-			lang: 'en',
+			lang: 'es',
 		},
 	},
 

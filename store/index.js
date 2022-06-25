@@ -1,9 +1,13 @@
 export const state = () => ({
-	loading: true
+	loading: true,
+	darkMode: false
 });
 
 export const mutations = {
-	setLoading(state, value) {
+	setLoading: function(state, value) {
 		state.loading = value;
+	},
+	setDark: function(state, value){
+		state.darkMode = value;
 	}
 }

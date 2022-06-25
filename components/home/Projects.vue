@@ -1,20 +1,19 @@
 <template>
     <section class="section">
         <div class="container">
-            <div v-viewport data-animation="fadeInDown" class="section__heading inanimate mb-48">
-                <h2 class="heading--3 mb-8">Mis <mark>proyectos</mark></h2>
+            <div v-viewport data-animation="fadeInDown" class="section__heading mb-48">
+                <h2 class="heading--2 mb-8">Mis <mark>proyectos</mark></h2>
                 <p>
-                    Parte de mi tiempo libre lo dedico a desarrollar aplicaciones y componentes para la web. Aquí podrás ver en los que estoy trabajando ahora.
-                    <br>
-                    Puedes ver todos mis desarrollos en mi perfil de <a href="https://github.com/narcecl" target="_blank" rel="noreferrer noopener" class="link--regular">GitHub</a>.
+                    Aquí puedes ver un poco de lo que he estado trabajando en el último tiempo. Si prefieres, puedes ver todos mis desarrollos en mi perfil de <a href="https://github.com/narcecl" target="_blank" rel="noreferrer noopener" class="link--regular">GitHub</a>.
                 </p>
             </div>
 
             <div v-viewport class="row total fade-child">
-                <div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-4 child">
+                <div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-6 col-lg-4 child">
                     <div class="project">
-                        <figure class="full project__image">
-                            <img :src="project.image" :alt="project.name">
+                        <figure class="hidden-caption full project__image">
+                            <nuxt-img :src="project.image" :alt="`Logo ${project.name}`" width="350" height="200" quality="80" loading="lazy" />
+                            <figcaption>Vista previa del proyecto ${project.name}</figcaption>
                         </figure>
                         <div class="project__info mt-12">
                             <div class="project__info__lang mb-24">
@@ -27,8 +26,9 @@
                                 <div class="btn--holder d-flex">
                                     <AppButton 
                                         v-for="(button, bi) in project.links"
+                                        :key="bi"
+                                        :href="button.url"
                                         target="_blank"
-                                        :key="bi" :href="button.url"
                                         :type="button.type"
                                         :text="button.text"
                                         :full="button.full"
@@ -66,24 +66,24 @@ export default {
                 {
                     name: 'Portafolio 2022',
                     description: 'Desarrollo de portafolio personal en NuxtJS.',
-                    image: 'https://via.placeholder.com/350x200',
+                    image: '/images/portafolio-22.jpg',
                     langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
                     links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/portafolio-nuxt', full: true, icon: 'fa-code'}]
                 },
                 {
                     name: 'Grids Planner',
-                    description: 'Una aplicación para poder organizar visualmente el feed de Instagram.',
-                    image: 'https://via.placeholder.com/350x200',
+                    description: 'Una aplicación que permite organizar visualmente el feed de Instagram.',
+                    image: '/images/grids-planner.jpg',
                     langs: ['VUE', 'HTML5', 'CSS3'],
-                    links: [{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'fa-code'}, {type: 'primary', text: 'Ir al proyecto', url: '#', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}]
+                    links: [{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'fa-code'}, {type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}]
                 },
-                {
-                    name: 'Vue Accesibilidad',
-                    description: 'Un componente para aplicar accesibilidad visual en la web.',
-                    image: 'https://via.placeholder.com/350x200',
-                    langs: ['VUE', 'HTML5', 'CSS3'],
-                    links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/vue-accesibilidad', full: true, icon: 'fa-code'}]
-                }
+                // {
+                //     name: 'Vue Accesibilidad',
+                //     description: 'Un componente transversal que permite aplicar accesibilidad visual en una web.',
+                //     image: '/images/accesibilidad.jpg',
+                //     langs: ['VUE', 'HTML5', 'CSS3'],
+                //     links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/vue-accesibilidad', full: true, icon: 'fa-code'}]
+                // }
             ]
         };
     }
@@ -96,6 +96,7 @@ export default {
     border-radius: 8px;
     background: #fff;
     border: 1px solid #eee;
+    @include transition;
 
     &__image{
         border-radius: 8px;
@@ -116,6 +117,13 @@ export default {
                 + a{margin-left: 8px;}
             }
         }
+    }
+}
+
+.dark{
+    .project{
+        background: #242424;
+        border-color: transparent;
     }
 }
 </style>

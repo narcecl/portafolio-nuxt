@@ -3,13 +3,16 @@
         <div class="container">
             <div class="row total align-items-center">
                 <div class="col-12 col-sm-6">
-                    <p class="f--small d-flex align-items-center">
+                    <p class="f--small d-flex justify-content-center justify-content-lg-start align-items-center">
                         <span class="fa fa-heart mr-12 animated animate__heartBeat animated__infinite" aria-hidden="true"></span>
                         Desarrollado con amor por <mark class="d-block ml-4">Nicolás Arce</mark>.
                     </p>
                 </div>
-                <div class="col-12 col-sm-6 text-right">
-                    <AppSocial size="sm" />
+                <div class="col-12 col-sm-6">
+                    <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
+                        <AppDarkMode class="mr-32" />
+                        <AppSocial size="sm" />
+                    </div>
                 </div>
             </div>
         </div>

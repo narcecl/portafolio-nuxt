@@ -1,0 +1,16 @@
+.dark{
+    body{
+        background: #1a1a1a;
+    }
+
+    h1,h2,h3,h4,h5,h6,mark{color:#fff;}
+    p, li, label{color: rgba(255, 255, 255, .87);}
+
+    .link{
+        &--regular{
+            color: #50a3df;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+    }
+}

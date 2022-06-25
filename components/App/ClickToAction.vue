@@ -1,7 +1,7 @@
 <template>
     <div class="click-to-action">
-        <div class="d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center w-100 w-sm-80">
+        <div class="d-sm-flex align-items-center justify-content-between">
+            <div class="d-sm-flex align-items-center w-100 w-sm-80">
                 <div class="click-to-action__icon d-flex align-items-center justify-content-center">
                     <span :class="icon" class="fa-solid color--regular" aria-hidden="true"></span>
                 </div>
@@ -10,7 +10,9 @@
                     <p v-if="description" class="f--small" v-text="description"></p>
                 </div>
             </div>
-            <slot></slot>
+            <div class="click-to-action__slot">
+                <slot></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -36,6 +38,14 @@ export default {
     background: rgba($primary-color, .15);
     border-radius: 8px;
 
+    &__content{
+        margin: 16px 0 20px;
+
+        @media screen and (min-width: $break-sm){
+            margin: 0;
+        }
+    }
+
     .link--regular{
         color: #555 !important;
     }
@@ -52,6 +62,14 @@ export default {
         span{
             font-size: 20px;
             color:#fff;
+        }
+    }
+}
+
+.dark{
+    .click-to-action{
+        &__slot{
+            *{color: #fff !important;}
         }
     }
 }

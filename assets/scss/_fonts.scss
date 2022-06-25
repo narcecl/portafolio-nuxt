@@ -2,7 +2,7 @@
 // headings, paragraphs, fonts-weight, text-colors
 
 h1,h2,h3,h4,h5,h6{font-weight: 500;color:#3B3D3F;line-height:1.2em;font-family:'Comfortaa', sans-serif;font-display: swap;}
-p, li, label{font-size:16px;line-height:1.6em;color:#555;}
+p, li, label{font-size:16px;line-height:1.7em;color:#555;}
 mark{font-weight:600;}
 
 .heading{
@@ -23,7 +23,10 @@ mark{font-weight:600;}
 }
 
 .f{
-    &--small{font-size: 14px;}
+    &--sm{font-size: 14px;}
+    &--rg{font-size: 16px;}
+    &--md{font-size: 18px;}
+    &--lg{font-size: 20px;}
 }
 
 .fw{
