@@ -8,7 +8,7 @@
                 </p>
             </div>
 
-            <div v-viewport class="row total fade-child">
+            <div v-viewport data-delay="300" class="row total fade-child">
                 <div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-6 col-lg-4 child">
                     <div class="project">
                         <figure class="hidden-caption full project__image">
@@ -43,6 +43,9 @@
             </div>
 
             <AppClickToAction
+                v-viewport
+                data-delay="600"
+                data-animation="fadeInDown"
                 class="mt-60"
                 title="¿Te gusta o te ha servido mi trabajo?"
                 description="Estoy constantemente desarrollando aplicaciones, snippets o componentes (generalmente en Vue)."
