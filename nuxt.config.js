@@ -64,9 +64,10 @@ export default {
 	},
 
 	// Middleware to images
-	serverMiddleware: {
-		'/_ipx': '~/server/middleware/ipx.js'
-	},
+	serverMiddleware: [
+		{path: '/', handler: '~/server/middleware/redirect.js'},
+		{path: '/_ipx', handler: '~/server/middleware/ipx.js'}
+	],
 
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
