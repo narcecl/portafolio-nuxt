@@ -63,6 +63,11 @@ export default {
 		domains: ['via.placeholder.com']
 	},
 
+	// Middleware to images
+	serverMiddleware: {
+		'/_ipx': '~/server/middleware/ipx.js'
+	},
+
 	// Modules: https://go.nuxtjs.dev/config-modules
 	modules: [
 		// https://go.nuxtjs.dev/axios
