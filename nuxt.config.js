@@ -65,7 +65,7 @@ export default {
 
 	// Middleware to images
 	serverMiddleware: [
-		// {path: '/', handler: '~/server/middleware/redirect.js'},
+		{path: '/', handler: '~/server/middleware/redirect.js'},
 		{path: '/_ipx', handler: '~/server/middleware/ipx.js'}
 	],
 
