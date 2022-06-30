@@ -12,8 +12,14 @@
 </template>
 
 <script>
+import cacheControl from '@/helpers/cacheControl';
+
 export default {
 	name: 'IndexPage',
+	middleware: cacheControl({
+		'max-age': 60,
+		'stale-when-revalidate': 5
+	}),
 	data: function(){
 		return {
 			ready: false

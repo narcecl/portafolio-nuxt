@@ -4,7 +4,7 @@
             <div class="container">
                 <div class="w-100 w-sm-80 text-center center">
                     <figure v-viewport data-animation="fadeInDown" data-delay="300" class="hidden-caption mb-60">
-                        <nuxt-img src="/images/narce-logo.png" alt="Logo Nicolás Arce" width="260" height="31.5" loading="lazy" />
+                        <nuxt-img src="/images/narce-logo.png" alt="Logo Nicolás Arce" width="260" height="34" loading="lazy" />
                         <figcaption>Isologo Nicolás Arce</figcaption>
                     </figure>
 
@@ -16,7 +16,7 @@
                     </div>
 
                     <div class="sociales mt-40">
-                        <p v-viewport data-animation="fadeInDown" data-delay="900" class="mb-20">Escríbeme a través de mis redes sociales para saber más de mi o simplemente saludarme :)</p>
+                        <p v-viewport data-animation="fadeInDown" data-delay="600" class="mb-20">Escríbeme a través de mis redes sociales para saber más de mi o simplemente saludarme :)</p>
                         <AppSocial v-viewport data-delay="1200" class="fade-child" theme="light" icon-type="square" :fade-child="true" />
                     </div>
                 </div>
