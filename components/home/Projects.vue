@@ -45,7 +45,7 @@
 
             <AppClickToAction
                 v-viewport
-                data-delay="600"
+                data-delay="300"
                 data-animation="fadeInDown"
                 class="mt-60"
                 title="¿Te gusta o te ha servido mi trabajo?"
@@ -96,7 +96,7 @@ export default {
 
 <style lang="scss" scoped>
 .project{
-    padding: 12px;
+    padding: 16px;
     border-radius: 8px;
     background: #fff;
     border: 1px solid #eee;
@@ -108,8 +108,6 @@ export default {
     }
 
     &__info{
-        padding: 0 8px;
-
         &__desc{
             min-height: 42px;
         }

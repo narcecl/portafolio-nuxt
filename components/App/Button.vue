@@ -28,12 +28,12 @@ export default {
 <style lang="scss" scoped>
 .btn{
     display: flex;
-    padding: 12px 16px;
+    padding: 16px;
     border-radius: 8px;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     align-items: center;
     justify-content: center;
     font-weight: 600;

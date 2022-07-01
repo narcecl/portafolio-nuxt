@@ -17,10 +17,6 @@ export default{
             value: this.$store.state.darkMode
         };
     },
-    created: function(){
-        console.log('value =>', this.value );
-        console.log('store =>', this.$store.state.darkMode );
-    },
     methods: {
         toggleDarkMode: function(){
             // Componente darkmode

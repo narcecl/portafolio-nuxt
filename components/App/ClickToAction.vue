@@ -34,12 +34,26 @@ export default {
 
 <style lang="scss" scoped>
 .click-to-action{
-    padding: 20px 24px;
+    padding: 20px 16px;
     background: rgba($primary-color, .15);
     border-radius: 8px;
 
+    @media screen and (min-width: $break-md){
+        padding: 20px 24px;
+    }
+
     &__content{
-        margin: 16px 0 20px;
+        margin: 20px 0 32px;
+
+        h3{
+            line-height: 1.6rem;
+            margin-bottom: 12px;
+
+            @media screen and (min-width: $break-md){
+                line-height:1.2rem;
+                margin-bottom:0;
+            }
+        }
 
         @media screen and (min-width: $break-sm){
             margin: 0;

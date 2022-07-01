@@ -17,7 +17,7 @@
 
                     <div class="sociales mt-40">
                         <p v-viewport data-animation="fadeInDown" data-delay="600" class="mb-20">Escríbeme a través de mis redes sociales para saber más de mi o simplemente saludarme :)</p>
-                        <AppSocial v-viewport data-delay="1200" class="fade-child" theme="light" icon-type="square" :fade-child="true" />
+                        <AppSocial v-viewport data-delay="900" class="w-80 w-sm-auto center fade-child" theme="light" icon-type="square" :fade-child="true" />
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@ export default{
         this.$nextTick(() => {
             const scrollTimer = setTimeout(() => {
                 this.timeout = true;
-            }, 5000);
+            }, 5300);
 
             document.addEventListener('scroll', () => {
                 clearTimeout(scrollTimer);
@@ -56,11 +56,15 @@ export default{
 
 <style lang="scss" scoped>
 	.hero-section{
-        height: 100vh;
+        padding: 120px 0;
         background-image: url(~static/images/main-bg.jpg);
 		background-size: cover;
-        background-attachment: fixed;
 		position: relative;
+
+        @media screen and (min-width: $break-md){
+            height: 100vh;
+            background-attachment: fixed;
+        }
 
 		> div{
             position: relative;

@@ -11,7 +11,7 @@
                 <div class="col-12 col-sm-6">
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
                         <AppDarkMode class="mr-32" />
-                        <AppSocial size="sm" />
+                        <AppSocial class="w-100 w-sm-auto" size="sm" />
                     </div>
                 </div>
             </div>
@@ -27,7 +27,11 @@ export default {
 
 <style lang="scss" scoped>
 footer{
-    padding: 32px 0;
+    padding: 32px 0 48px;
+
+    @media screen and (min-width: $break-md){
+        padding: 32px 0;
+    }
 
     .fa-heart{
         color: #e14b1d;

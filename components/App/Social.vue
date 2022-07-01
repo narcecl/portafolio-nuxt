@@ -1,5 +1,5 @@
 <template>
-    <ul class="socials" :class="[`socials--${theme} socials--${size}`]">
+    <ul class="socials d-flex align-items-center" :class="[`socials--${theme} socials--${size} socials--${iconType}`]">
         <li v-for="(item, index) in socials" :key="index" :class="{'child': fadeChild}">
             <a :href="item.href" :aria-label="`Sigueme en ${item.name}`" :title="`Sigueme en ${item.name}`" target="_blank" rel="noreferrer noopener">
                 <span :class="item.icons[iconType]" aria-hidden="true"></span>
@@ -34,16 +34,36 @@ export default{
 
 <style lang="scss" scoped>
 .socials{
+    justify-content: space-between;
+
+    @media screen and (min-width: $break-md){
+        width: auto;
+        justify-content: center;
+    }
+
     li{
-        display: inline-block;
-        margin-right: 32px;
-        vertical-align: middle;
+        @media screen and (min-width: $break-md){
+            margin-right: 32px;
+        }
+
         a{
+            display: block;
             @include transition;
 
             &:hover{opacity:.5}
         }
         &:last-of-type{margin-right:0;}
+    }
+
+    &--rounded{
+        li{
+            a{
+                padding: 4px 12px;
+                @media screen and (min-width: $break-md){
+                    padding: 0;
+                }
+            }
+        }
     }
 
     &--light{
