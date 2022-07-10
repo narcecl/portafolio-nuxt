@@ -5,9 +5,8 @@ module.exports = function (req, res, next) {
     const forceDomain = 'https://www.narce.cl'
   
     if( env === 'production' && host === 'narce.cl' ){
-        console.log('redirect');
-        // res.writeHead(301, { Location: forceDomain + url })
-        // return res.end()
+        res.writeHead(301, { Location: forceDomain + url })
+        return res.end()
     }
 
     return next()
