@@ -93,10 +93,9 @@ export default {
 	},
 	methods: {
 		ga: function(){
-			this.$ga.page({
-				page: '/projects',
-				title: 'Mis proyectos',
-				location: window.location.href
+			this.$store.dispatch('googleAnalytics', {
+				pageTitle: 'Mis proyectos',
+				page_path: '/projects'
 			});
 		}
 	}

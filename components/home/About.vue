@@ -28,10 +28,9 @@ export default {
 	name: 'HomeAbout',
 	methods: {
 		ga: function(){
-			this.$ga.page({
-				page: '/about',
-				title: 'Acerca de mi',
-				location: window.location.href
+			this.$store.dispatch('googleAnalytics', {
+				pageTitle: 'Acerca de mi',
+				page_path: '/about'
 			});
 		}
 	}

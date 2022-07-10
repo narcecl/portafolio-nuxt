@@ -78,10 +78,9 @@ export default {
 	},
 	methods: {
 		ga: function(){
-			this.$ga.page({
-				page: '/experience',
-				title: 'Mi experiencia',
-				location: window.location.href
+			this.$store.dispatch('googleAnalytics', {
+				pageTitle: 'Mi experiencia',
+				page_path: '/experience'
 			});
 		}
 	}

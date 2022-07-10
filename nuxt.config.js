@@ -38,6 +38,15 @@ export default {
 				onload: "this.rel='stylesheet'"
 			}
 		],
+		script: [
+            {
+                src: "https://www.googletagmanager.com/gtag/js?id=G-822FMDQM7F",
+                async: true,
+            },
+            {
+                src: "js/ga.js",
+            }
+        ]
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -66,8 +75,7 @@ export default {
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/style-resources',
 		'@nuxt/image',
-		'@unlighthouse/nuxt',
-		'@nuxtjs/google-analytics'
+		'@unlighthouse/nuxt'
 	],
 
 	image: {
@@ -85,7 +93,7 @@ export default {
 		// https://go.nuxtjs.dev/axios
 		'@nuxtjs/axios',
 		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
+		'@nuxtjs/pwa'
 	],
 
 	// Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -113,9 +121,5 @@ export default {
 				implementation: require('sass'),
 			},
 		}
-	},
-
-	googleAnalytics: {
-		id: 'G-HWRBSNZ3VP'
 	}
 }
