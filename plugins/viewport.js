@@ -3,7 +3,8 @@ import Vue from 'vue';
 Vue.directive('viewport', {
 	inserted: (el, binding, vnode) => {
 		// Lista de eventos para ejecutar la función
-		if( !el.className.includes('fade-child') ){
+		
+		if( typeof binding.value !== 'function' && !el.className.includes('fade-child') ){
 			el.classList.add('inanimate');
 		}
 

@@ -67,6 +67,7 @@ export default {
 		'@nuxtjs/style-resources',
 		'@nuxt/image',
 		'@unlighthouse/nuxt',
+		'@nuxtjs/google-analytics'
 	],
 
 	image: {
@@ -113,4 +114,8 @@ export default {
 			},
 		}
 	},
+
+	googleAnalytics: {
+		id: 'G-HWRBSNZ3VP'
+	}
 }
