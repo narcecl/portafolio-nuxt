@@ -2,15 +2,15 @@
 	<section v-viewport="ga" class="section">
 		<div class="container">
 			<div v-viewport data-animation="fadeInDown" class="section__heading mb-48">
-				<h2 class="heading--2 mb-16">Mis <mark>proyectos</mark></h2>
+				<h2 class="heading--2 mb-8">Mis <mark>proyectos</mark></h2>
 				<p>
 					Aquí puedes ver un poco de lo que he estado trabajando en el último tiempo.<br>
 					Si prefieres, puedes ver todos mis desarrollos en mi perfil de <a href="https://github.com/narcecl" target="_blank" rel="noreferrer noopener" class="link--regular">GitHub</a>.
 				</p>
 			</div>
 
-			<div v-viewport data-delay="300" class="row total fade-child">
-				<div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-6 col-lg-6 child">
+			<div v-viewport data-delay="300" class="row total mini fade-child">
+				<div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-6 col-lg-4 child">
 					<div class="project">
 						<figure class="hidden-caption full project__image">
 							<nuxt-img :src="project.image" :alt="`Logo ${project.name}`" width="520" height="300" loading="lazy" />
@@ -68,6 +68,16 @@ export default {
 		return {
 			projects: [
 				{
+					name: 'Pokédex',
+					description: 'Desarrollo de Pokédex con la lista de todos los Pokémons por generación.',
+					image: '/images/pokedex.jpg',
+					langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
+					links: [
+						{type: 'github', text: '', url: 'https://github.com/narcecl/pokedex', icon: 'fa-code'},
+						{type: 'primary', text: 'Ir al proyecto', url: 'https://narcecl.github.io/pokedex/', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}
+					]
+				},
+				{
 					name: 'Portafolio 2022',
 					description: 'Desarrollo de portafolio personal en NuxtJS.',
 					image: '/images/portafolio-22.jpg',
@@ -76,10 +86,13 @@ export default {
 				},
 				{
 					name: 'Grids Planner',
-					description: 'Organiza visualmente el feed de Instagram.',
+					description: 'Organizador visual para el Feed de Instagram.',
 					image: '/images/grids-planner.jpg',
 					langs: ['VUE', 'HTML5', 'CSS3'],
-					links: [{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'fa-code'}, {type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}]
+					links: [
+						{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'fa-code'},
+						{type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}
+					]
 				},
 				// {
 				//     name: 'Vue Accesibilidad',

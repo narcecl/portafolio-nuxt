@@ -22,7 +22,7 @@ export default{
 			socials: [
 				// {name: 'Email', href: 'mailto:hola@narce.cl', icons: {square: 'fa-solid fa-square-envelope', rounded: 'fa-solid fa-envelope'}},
                 {name: 'Instagram', href: 'https://www.instagram.com/narcecl/', icons: {square: 'fa-brands fa-instagram-square', rounded: 'fa-brands fa-instagram'}},
-				{name: 'Facebook', href: 'https://www.facebook.com/narcecl/', icons: {square: 'fa-brands fa-facebook-square', rounded: 'fa-brands fa-facebook'}},
+				// {name: 'Facebook', href: 'https://www.facebook.com/narcecl/', icons: {square: 'fa-brands fa-facebook-square', rounded: 'fa-brands fa-facebook'}},
 				{name: 'Twitter', href: 'https://twitter.com/narcecl', icons: {square: 'fa-brands fa-twitter-square', rounded: 'fa-brands fa-twitter'}},
 				{name: 'LinkedIn', href: 'https://www.linkedin.com/in/narcecl/', icons: {square: 'fa-brands fa-linkedin', rounded: 'fa-brands fa-linkedin-in'}},
 				{name: 'GitHub', href: 'https://github.com/narcecl', icons: {square: 'fa-brands fa-github-square', rounded: 'fa-brands fa-github'}},

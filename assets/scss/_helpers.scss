@@ -59,9 +59,9 @@ section{
 
 [v-cloak] > * {display:none;}
 
-figure{
-	margin:0;
-	padding:0;
+figure, picture{
+	margin: 0;
+	padding: 0;
 
 	&.hidden-caption{
 		figcaption{display: none;}
