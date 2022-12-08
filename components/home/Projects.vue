@@ -11,7 +11,7 @@
 
 			<div v-viewport data-delay="300" class="row total mini fade-child">
 				<div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-6 col-lg-4 child">
-					<div class="project">
+					<AppCard class="project">
 						<figure class="hidden-caption full project__image">
 							<nuxt-img :src="project.image" :alt="`Logo ${project.name}`" width="520" height="300" loading="lazy" />
 							<figcaption>Vista previa del proyecto ${project.name}</figcaption>
@@ -39,7 +39,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</AppCard>
 				</div>
 			</div>
 
@@ -69,7 +69,7 @@ export default {
 			projects: [
 				{
 					name: 'Pokédex',
-					description: 'Desarrollo de Pokédex con la lista de todos los Pokémons por generación.',
+					description: 'Desarrollo de Pokédex con la lista de todos los Pokémon por generación.',
 					image: '/images/pokedex.jpg',
 					langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
 					links: [
