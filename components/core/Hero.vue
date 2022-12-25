@@ -10,12 +10,6 @@
     </section>
 </template>
 
-<script>
-export default {
-    name: 'AppHero'
-}
-</script>
-
 <style lang="scss" scoped>
 .hero-section{
     padding: 120px 0;

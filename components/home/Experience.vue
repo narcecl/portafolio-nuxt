@@ -11,7 +11,7 @@
 
 			<div v-viewport="initExperience" class="fade-child experience-list" :class="{'experience-list--ready': experienceReady }">
 				<div v-for="(item, i) in experience" :key="i" class="experience-list__item d-flex child">
-					<AppCard class="w-100 w-lg-45 experience-list__item__cont">
+					<Card class="w-100 w-lg-45 experience-list__item__cont">
 						<picture class="hidden-caption">
 							<nuxt-img :src="item.img" :alt="`Logo ${item.name}`" quality="80" />
 							<figcaption>Logo {{ item.name }}</figcaption>
@@ -19,13 +19,13 @@
 						<h3 class="heading--6 fw--bold">{{ item.position }}</h3>
 						<p>{{ item.name }}</p>
 						<p class="f--sm mt-16" v-text="item.description"></p>
-					</AppCard>
+					</Card>
 				</div>
 			</div>
 
 			<div class="mt-72">
 				<p data-delay="300" class="text-center mb-12">
-					Durante el último tiempo he estado trabajado con las siguientes tecnologías:
+					Durante el último tiempo he estado trabajando con las siguientes tecnologías:
 				</p>
 
 				<div v-viewport class="logos-list row total mini align-items-center justify-content-center fade-child">
@@ -43,7 +43,7 @@
 
 <script>
 export default {
-	name: 'HomeExperience',
+	name: 'Experience',
 	data: function(){
 		return {
 			experienceReady: false,
@@ -92,7 +92,6 @@ export default {
 			});
 		},
 		initExperience: function(){
-			console.log('wawa');
 			this.experienceReady = true;
 		}
 	}

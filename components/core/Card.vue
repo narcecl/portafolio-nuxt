@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'AppCard'
+    name: 'Card',
 }
 </script>
 

@@ -25,7 +25,7 @@
 
 <script>
 export default {
-	name: 'HomeAbout',
+	name: 'About',
 	methods: {
 		ga: function(){
 			this.$store.dispatch('googleAnalytics', {

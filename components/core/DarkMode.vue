@@ -2,27 +2,36 @@
     <div class="dark-mode-toggle">  
         <input id="switch" v-model="value" :checked="value" type="checkbox" class="switch" @change="toggleDarkMode"/>
         <label for="switch" class="label">
-            <i class="fas fa-moon" aria-hidden="true"></i>
-            <i class="fas fa-sun" aria-hidden="true"></i>
-            <div class="ball" title="Alternar modo oscuro"></div>
+            <font-awesome-icon :icon="['fas', 'moon']" aria-hidden="true" />
+            <font-awesome-icon :icon="['fas', 'sun']" aria-hidden="true" />
+            <div class="ball" title="Alternar modo oscuro" />
         </label>
     </div>
 </template>
 
 <script>
-export default{
+import { mapGetters, mapMutations } from 'vuex';
+
+export default {
     name: 'DarkMode',
     data: function(){
         return {
-            value: this.$store.state.darkMode
+            value: false,
         };
     },
-    methods: {
-        toggleDarkMode: function(){
-            // Componente darkmode
-		    this.$store.commit('setDark', this.value);
-        }
+    computed: {
+        ...mapGetters(['darkMode'])
     },
+    created: function(){
+        this.value = this.darkMode;
+    },
+    methods: {
+        ...mapMutations(['setDark']),
+        
+        toggleDarkMode: function(){
+		    this.setDark(this.value);
+        }
+    }
 }
 </script>
 

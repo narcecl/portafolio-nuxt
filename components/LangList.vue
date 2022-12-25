@@ -8,7 +8,7 @@
 export default {
     name: 'LangList',
     props: {
-        langs: {type: Array, default: () => []}
+        langs: { type: Array, default: () => [] }
     },
     methods: {
         getTheme: function(lang){
@@ -26,7 +26,7 @@ export default {
                     return 'css';
             }
         }
-    }
+    },
 }
 </script>
 

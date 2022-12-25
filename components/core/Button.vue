@@ -1,13 +1,13 @@
 <template>
     <a class="btn" :class="[`btn--${type}`, classController]" :aria-label="text ? text : 'Button'">
-        <span v-if="icon" :class="`btn__icon fa-solid ${icon} order-${iconOrder} ${text ? 'hm' : ''}`" aria-hidden="true"></span>
+        <font-awesome-icon v-if="icon" :class="`btn__icon order-${iconOrder} ${text ? 'hm' : ''}`" :icon="['fas', icon]" aria-hidden="true" />
         {{ text }}
     </a>
 </template>
 
 <script>
 export default {
-    name: 'AppButton',
+    name: 'Button', // eslint-disable-line
     props: {
         type: {type: String, default: 'primary'},
         text: {type: String, default: ''},

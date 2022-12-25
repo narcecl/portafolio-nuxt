@@ -24,29 +24,36 @@ export default {
 			{ name: 'format-detection', content: 'telephone=no' },
 		],
 		link: [
-			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-			{
-				rel: 'preload',
-				href: 'https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Open+Sans:wght@400;600&display=swap',
-				as: 'style',
-				onload: "this.rel='stylesheet'"
-			},
-			{
-				rel: 'preload',
-				href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css',
-				as: 'style',
-				onload: "this.rel='stylesheet'"
-			}
+			{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
 		],
 		script: [
-            {
-                src: "https://www.googletagmanager.com/gtag/js?id=G-822FMDQM7F",
-                async: true,
-            },
-            {
-                src: "js/ga.js",
-            }
+            { src: "https://www.googletagmanager.com/gtag/js?id=G-822FMDQM7F", async: true },
+            { src: "js/ga.js" }
         ]
+	},
+
+	// Font Awesome Icons Pack
+	fontawesome: {
+		icons: {
+			solid: true,
+			brands: true
+		}
+	},
+
+	// Google Fonts
+	googleFonts: {
+		display: 'swap',
+		download: true,
+		overwriting: false,
+		preload: true,
+		families: {
+			'Open Sans': {
+				wght: [400, 600]
+			},
+			Comfortaa: {
+				wght: [400, 700]
+			}
+		}
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -67,7 +74,13 @@ export default {
 	],
 
 	// Auto import components: https://go.nuxtjs.dev/config-components
-	components: true,
+	components: [
+		'~components',
+		{ path: '~/components/App', prefix: 'App' },
+		{ path: '~/components/home', prefix: '' },
+		{ path: '~/components/core', prefix: '' },
+		{ path: '~/components/core', prefix: '' }
+	],
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
 	buildModules: [
@@ -75,7 +88,9 @@ export default {
 		'@nuxtjs/eslint-module',
 		'@nuxtjs/style-resources',
 		'@nuxt/image',
-		'@unlighthouse/nuxt'
+		'@unlighthouse/nuxt',
+		'@nuxtjs/google-fonts',
+		'@nuxtjs/fontawesome',
 	],
 
 	image: {

@@ -10,8 +10,8 @@
                 </div>
                 <div class="col-12 col-sm-6">
                     <div class="d-flex align-items-center justify-content-center justify-content-lg-end">
-                        <AppDarkMode class="mr-32" />
-                        <AppSocial class="w-100 w-sm-auto" size="sm" />
+                        <DarkMode class="mr-32" />
+                        <Social class="w-100 w-sm-auto" size="sm" />
                     </div>
                 </div>
             </div>

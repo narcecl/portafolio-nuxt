@@ -3,6 +3,10 @@ export const state = () => ({
 	darkMode: false
 });
 
+export const getters = {
+	darkMode: (state) => state.darkMode
+};
+
 export const mutations = {
 	setLoading: function(state, value) {
 		state.loading = value;
@@ -15,7 +19,7 @@ export const mutations = {
 export const actions = {
 	googleAnalytics: function(state, {pageTitle, pageLocation}){
 		/* eslint-disable */
-		if( gtag ){
+		if( typeof gtag !== 'undefined' ){
 			gtag('event', 'page_view', {
 				page_title: pageTitle,
 				page_path: pageLocation,
