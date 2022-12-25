@@ -3,6 +3,7 @@ module.exports = {
 	env: {
 		browser: true,
 		node: true,
+		jest: true
 	},
 	parserOptions: {
 		parser: '@babel/eslint-parser',
@@ -14,8 +15,8 @@ module.exports = {
 	rules: {
 		"object-shorthand": 0,
 		"no-console": "off",
-		"vue/multi-word-component-names": ["error", {
-			"ignores": []
-		}]
+		'vue/multi-word-component-names': ['error', {
+			'ignores': ['About', 'Cover', 'Experience', 'Projects', 'Loader', 'Social', 'Button']
+		}]		  
 	},
 }

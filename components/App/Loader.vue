@@ -10,7 +10,7 @@
 
 <script>
 export default {
-	name: 'AppLoader',
+	name: 'Loader',
 	data: () => {
 		return {
 			loading: true

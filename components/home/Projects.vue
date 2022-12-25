@@ -11,7 +11,7 @@
 
 			<div v-viewport data-delay="300" class="row total mini fade-child">
 				<div v-for="(project, i) in projects" :key="i" class="col-12 col-sm-6 col-lg-4 child">
-					<AppCard class="project">
+					<Card class="project">
 						<figure class="hidden-caption full project__image">
 							<nuxt-img :src="project.image" :alt="`Logo ${project.name}`" width="520" height="300" loading="lazy" />
 							<figcaption>Vista previa del proyecto ${project.name}</figcaption>
@@ -25,7 +25,7 @@
 
 							<div class="project__info__actions">
 								<div class="btn--holder d-flex">
-									<AppButton 
+									<Button 
 										v-for="(button, bi) in project.links"
 										:key="bi"
 										:href="button.url"
@@ -39,31 +39,31 @@
 								</div>
 							</div>
 						</div>
-					</AppCard>
+					</Card>
 				</div>
 			</div>
 
-			<AppClickToAction
+			<ClickToAction
 				v-viewport
 				data-delay="300"
 				data-animation="fadeInDown"
 				class="mt-60"
 				title="¿Te gusta o te ha servido mi trabajo?"
 				description="Estoy constantemente desarrollando aplicaciones, snippets o componentes (generalmente en Vue)."
-				icon="fa-mug-hot"
+				icon="mug-hot"
 			>
 				<a href="https://ko-fi.com/narcecl" class="link--regular fw--bold f-14" rel="noreferrer noopener" target="_blank">
 					Regalame un café
-					<i class="fa-solid fa-chevron-right ml-8" aria-hidden="true"></i>
+					<font-awesome-icon class="ml-8" :icon="['fas', 'chevron-right']" aria-hidden="true" />
 				</a>
-			</AppClickToAction>
+			</ClickToAction>
 		</div>
 	</section>
 </template>
 
 <script>
 export default {
-	name: 'HomeProjects',
+	name: 'Projects',
 	data: function(){
 		return {
 			projects: [
@@ -73,8 +73,8 @@ export default {
 					image: '/images/pokedex.jpg',
 					langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
 					links: [
-						{type: 'github', text: '', url: 'https://github.com/narcecl/pokedex', icon: 'fa-code'},
-						{type: 'primary', text: 'Ir al proyecto', url: 'https://narcecl.github.io/pokedex/', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}
+						{type: 'github', text: '', url: 'https://github.com/narcecl/pokedex', icon: 'code'},
+						{type: 'primary', text: 'Ir al proyecto', url: 'https://narcecl.github.io/pokedex/', full: true, icon: 'arrow-up-right-from-square', iconOrder: 2}
 					]
 				},
 				{
@@ -82,7 +82,7 @@ export default {
 					description: 'Desarrollo de portafolio personal en NuxtJS.',
 					image: '/images/portafolio-22.jpg',
 					langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
-					links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/portafolio-nuxt', full: true, icon: 'fa-code'}]
+					links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/portafolio-nuxt', full: true, icon: 'code'}]
 				},
 				{
 					name: 'Grids Planner',
@@ -90,8 +90,8 @@ export default {
 					image: '/images/grids-planner.jpg',
 					langs: ['VUE', 'HTML5', 'CSS3'],
 					links: [
-						{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'fa-code'},
-						{type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'fa-arrow-up-right-from-square', iconOrder: 2}
+						{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'code'},
+						{type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'arrow-up-right-from-square', iconOrder: 2}
 					]
 				},
 				// {
@@ -99,7 +99,7 @@ export default {
 				//     description: 'Un componente transversal que permite aplicar accesibilidad visual en una web.',
 				//     image: '/images/accesibilidad.jpg',
 				//     langs: ['VUE', 'HTML5', 'CSS3'],
-				//     links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/vue-accesibilidad', full: true, icon: 'fa-code'}]
+				//     links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/vue-accesibilidad', full: true, icon: 'code'}]
 				// }
 			]
 		};

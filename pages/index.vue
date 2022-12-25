@@ -1,10 +1,10 @@
 <template>
 	<div v-if="ready">
 		<main>
-			<HomeHero />
-			<HomeAbout />
-			<HomeExperience />
-			<HomeProjects />
+			<Cover />
+			<About />
+			<Experience />
+			<Projects />
 		</main>
 
 		<AppFooter />

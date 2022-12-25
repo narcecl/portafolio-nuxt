@@ -3,7 +3,7 @@
         <div class="d-sm-flex align-items-center justify-content-between">
             <div class="d-sm-flex align-items-center w-100 w-sm-80">
                 <div class="click-to-action__icon d-flex align-items-center justify-content-center">
-                    <span :class="icon" class="fa-solid color--regular" aria-hidden="true"></span>
+                    <font-awesome-icon :icon="['fas', icon]" aria-hidden="true" />
                 </div>
                 <div class="click-to-action__content">
                     <h3 v-if="title" class="text-uppercase fw--bold" v-text="title"></h3>
@@ -24,10 +24,6 @@ export default {
         title: {type: [String, Boolean], default: false},
         description: {type: [String, Boolean], default: false},
         icon: {type: [String, Boolean], default: false}
-    },
-    data: function(){
-        return {
-        };
     }
 }
 </script>
@@ -73,9 +69,10 @@ export default {
         border-radius: 100%;
         background: rgba($primary-color, .7);
 
-        span{
+        svg{
             font-size: 20px;
-            color:#fff;
+            fill: #fff;
+            path{ fill: inherit; }
         }
     }
 }

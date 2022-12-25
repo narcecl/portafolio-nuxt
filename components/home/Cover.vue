@@ -1,6 +1,6 @@
 <template>
     <div class="home__hero">
-        <AppHero>
+        <Hero>
             <figure v-viewport data-animation="fadeInDown" data-delay="300" class="hidden-caption mb-60">
                 <nuxt-img src="/images/narce.svg" alt="Logo Nicolás Arce" width="260" height="34" loading="lazy" />
                 <figcaption>Isologo Nicolás Arce</figcaption>
@@ -15,15 +15,15 @@
 
             <div class="sociales mt-40">
                 <p v-viewport data-animation="fadeInDown" data-delay="600" class="mb-20">Escríbeme a través de mis redes sociales para saber más de mi o simplemente saludarme :)</p>
-                <AppSocial v-viewport data-delay="900" class="w-80 w-sm-auto center fade-child" theme="light" :fade-child="true" />
+                <Social v-viewport data-delay="900" class="w-80 w-sm-auto center fade-child" theme="light" :fade-child="true" />
             </div>
-        </AppHero>
+        </Hero>
     
         <div v-scrollto="'#home-about'" class="scroll-down" tabindex="0">
             <transition name="fade">
                 <p v-if="timeout">Haz scroll para ver más contenido abajo.</p>
             </transition>
-            <i class="d-inline-block animated animated__infinite animate__bounce fa-solid fa-chevron-down" aria-hidden="true" title="Ir a la siguiente sección"></i>
+            <font-awesome-icon class="d-inline-block animated animated__infinite animate__bounce" :icon="['fas', 'chevron-down']" aria-hidden="true" title="Ir a la siguiente sección" />
         </div>
 
         <div class="custom-shape-divider-bottom-1666744919">
@@ -36,7 +36,7 @@
 
 <script>
 export default{
-    name: 'HomeHero',
+    name: 'Cover',
     data: function(){
         return {
             timeout: false
@@ -44,13 +44,9 @@ export default{
     },
     mounted: function(){
         this.$nextTick(() => {
-            const scrollTimer = setTimeout(() => {
+            setTimeout(() => {
                 this.timeout = true;
             }, 5300);
-
-            document.addEventListener('scroll', () => {
-                clearTimeout(scrollTimer);
-            });
         });
     }
 }
@@ -87,9 +83,10 @@ export default{
             font-size: 14px;
         }
 
-        i{
+        svg{
             font-size: 24px;
-            color: #fff;
+            fill: #fff;
+            path{fill: inherit;}
         }
     }
 
