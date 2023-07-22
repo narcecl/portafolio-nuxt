@@ -16,7 +16,7 @@ module.exports = {
 		"object-shorthand": 0,
 		"no-console": "off",
 		'vue/multi-word-component-names': ['error', {
-			'ignores': ['About', 'Cover', 'Experience', 'Projects', 'Loader', 'Social', 'Button']
+			'ignores': ['About', 'Cover', 'Experience', 'Projects', 'Loader', 'Social', 'Button', 'Card', 'Hero', 'List',]
 		}]		  
 	},
 }

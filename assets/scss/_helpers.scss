@@ -10,7 +10,11 @@ body{
 }
 
 .section{
-	padding: 124px 0;
+	padding: 72px 0;
+
+	@media screen and (min-width: $break-md){
+		padding: 124px 0;
+	}
 }
 
 .link{

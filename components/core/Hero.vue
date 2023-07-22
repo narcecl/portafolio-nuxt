@@ -16,9 +16,9 @@
     background-image: url(~static/images/main-bg.jpg);
     background-size: cover;
     position: relative;
-    height: 100vh;
 
     @media screen and (min-width: $break-md){
+        height: 100vh;
         background-attachment: fixed;
     }
 

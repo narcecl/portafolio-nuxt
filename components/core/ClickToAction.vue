@@ -43,11 +43,11 @@ export default {
 
         h3{
             line-height: 1.6rem;
-            margin-bottom: 12px;
+            margin-bottom: 8px;
 
             @media screen and (min-width: $break-md){
-                line-height:1.2rem;
-                margin-bottom:0;
+                line-height: 1.2rem;
+                margin-bottom: 0;
             }
         }
 
