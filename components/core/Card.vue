@@ -12,12 +12,11 @@ export default {
 
 <style lang="scss" scoped>
 .card{
-    padding: 32px 24px;
+    padding: 16px;
     border-radius: 8px;
     background: #fff;
-    box-shadow: 0 0 8px rgba(0,0,0,.05);
-    border: 1px solid #eee;
     position: relative;
+    border: 1px solid #eee;
 }
 
 .dark{

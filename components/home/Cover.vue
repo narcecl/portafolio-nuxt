@@ -69,6 +69,11 @@ export default{
         height: 24px;
         cursor: pointer;
         z-index: 2;
+        display: none;
+
+        @media screen and (min-width: $break-md){
+            display: block;
+        }
 
         &:focus, &:focus-visible, &:focus-within{
             outline: 1px solid white;
@@ -93,7 +98,7 @@ export default{
     .custom-shape-divider-bottom-1666744919 {
         display: none;
         position: absolute;
-        bottom: 0;
+        bottom: 100px;
         left: 0;
         width: 100%;
         overflow: hidden;
@@ -129,15 +134,16 @@ export default{
                 margin: 0 auto;
                 color:#fff;
                 text-transform: uppercase;
+                display: none;
+
+                @media screen and (min-width: $break-sm){
+                    display: block;
+                }
 
                 span{
-                    font-size: 16px;
+                    font-size: 28px;
+                    letter-spacing: .7px;
                     display: block;
-
-                    @media screen and (min-width: $break-sm){
-                        font-size: 28px;
-                        letter-spacing: .7px;
-                    }
                 }
             }
 

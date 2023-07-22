@@ -90,17 +90,10 @@ export default {
 					image: '/images/grids-planner.jpg',
 					langs: ['VUE', 'HTML5', 'CSS3'],
 					links: [
-						{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'code'},
-						{type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'arrow-up-right-from-square', iconOrder: 2}
+						{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/grids-planner', full: true, icon: 'code'},
+						// {type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'arrow-up-right-from-square', iconOrder: 2}
 					]
 				},
-				// {
-				//     name: 'Vue Accesibilidad',
-				//     description: 'Un componente transversal que permite aplicar accesibilidad visual en una web.',
-				//     image: '/images/accesibilidad.jpg',
-				//     langs: ['VUE', 'HTML5', 'CSS3'],
-				//     links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/vue-accesibilidad', full: true, icon: 'code'}]
-				// }
 			]
 		};
 	},
