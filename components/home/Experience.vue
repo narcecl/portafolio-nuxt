@@ -1,5 +1,5 @@
 <template>
-	<section v-viewport="ga" class="section bg--secondary">
+	<section v-viewport="ga" class="section">
 		<div class="container">
 			<div class="section__heading mb-48">
 				<h2 class="heading--2 mb-8">Mi <mark>experiencia</mark></h2>
@@ -10,7 +10,7 @@
 			</div>
 
 			<div v-viewport="initExperience" class="fade-child experience-list" :class="{'experience-list--ready': experienceReady }">
-				<div v-for="(item, i) in experience" :key="i" class="experience-list__item d-flex child">
+				<div v-for="(item, i) in experienceList" :key="i" class="experience-list__item d-flex child">
 					<Card class="w-100 w-lg-45 experience-list__item__cont">
 						<picture class="hidden-caption">
 							<nuxt-img :src="item.img" :alt="`Logo ${item.name}`" quality="80" />
@@ -34,7 +34,7 @@
 				</p>
 
 				<div v-viewport class="logos-list row total mini align-items-center justify-content-center fade-child">
-					<div v-for="(item, i) in logos" :key="i" class="logos-list__item col-6 col-sm child">
+					<div v-for="(item, i) in logos" :key="i" class="logos-list__item col-4 col-sm child">
 						<picture class="hidden-caption full">
 							<nuxt-img :src="item.img" :alt="`Logo ${item.name}`" width="290" height="102" quality="80" />
 							<figcaption>Logo {{item.name}}</figcaption>
@@ -58,9 +58,10 @@ export default {
 					position: 'Front-end Developer Senior',
 					img: '/images/itau.svg',
 					description: 'oct 2022 - Actualmente',
+					enabled: true,
 					long_description: [
 						'Front-end Developer Senior en el equipo de Design Ops del CoE UX.',
-						'Encargado del desarrollo y la optimización del nuevo Design System del Banco en React.',
+						'Encargado del desarrollo y la optimización del nuevo Design System en React.',
 						'Responsable de generar y mantener la documentación del Design System para los equipos de desarrollo internos y externos del Banco.',
 					],
 				},
@@ -69,6 +70,7 @@ export default {
 					position: 'Lead Front-end Developer',
 					img: '/images/modyo.svg',
 					description: 'abr 2022 - sept 2022',
+					enabled: false,
 					long_description: [
 						'Lead Front-end para el equipo de CFG Colombia.',
 					],
@@ -78,6 +80,7 @@ export default {
 					position: 'Front-end Developer',
 					img: '/images/falabellafinanciero.svg',
 					description: 'nov 2021 - abr 2022',
+					enabled: true,
 					long_description: [
 						'Desarrollador Front-end para el sitio público de Banco Falabella (Chile, México, Perú y Colombia).',
 						'Apoyo en el desarrollo y mantención de la nueva librería de componentes en React para Perú y Chile.',
@@ -89,6 +92,7 @@ export default {
 					position: 'Lead Front-end Developer',
 					img: '/images/santander.svg',
 					description: 'ago 2017 - nov 2021',
+					enabled: true,
 					long_description: [
 						'Lead Front-end Developer para el sitio público.',
 						'Encargado del desarrollo y la optimización de la librería de componentes en Vue.',
@@ -108,6 +112,11 @@ export default {
 			]
 		};
 	},
+	computed: {
+		experienceList: function(){
+			return this.experience.filter(item => item.enabled);
+		},
+	},
 	methods: {
 		ga: function(){
 			this.$store.dispatch('googleAnalytics', {
@@ -118,7 +127,7 @@ export default {
 		initExperience: function(){
 			this.experienceReady = true;
 		}
-	}
+	},
 }
 </script>
 

@@ -7,13 +7,14 @@ body{
 	@include transition;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
+	background: #f7f7f7;
 }
 
 .section{
-	padding: 72px 0;
+	padding: 64px 0;
 
 	@media screen and (min-width: $break-md){
-		padding: 124px 0;
+		padding: 72px 0;
 	}
 }
 
@@ -77,6 +78,17 @@ figure, picture{
 	&.rounded{
 		border-radius: 8px;
 		overflow: hidden;
+	}
+	&.circle{
+		border-radius: 100%;
+		overflow: hidden;
+		max-width: 100%;
+
+		img{
+			max-width: 100%;
+			object-fit: cover;
+			height: 100%
+		}
 	}
 	img, canvas{max-width:100%;height:auto;}
 }
