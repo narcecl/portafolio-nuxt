@@ -37,9 +37,6 @@ export default {
             return messages[this.error.statusCode];
         }
     },
-    created: function(){
-        console.log( this.error );
-    },
     methods: {
 		ga: function(){
 			this.$store.dispatch('googleAnalytics', {

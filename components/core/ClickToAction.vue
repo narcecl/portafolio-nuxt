@@ -30,9 +30,10 @@ export default {
 
 <style lang="scss" scoped>
 .click-to-action{
-    padding: 20px 16px;
+    padding: 24px;
     background: rgba($primary-color, .15);
-    border-radius: 8px;
+    border-radius: 16px;
+    box-shadow: 0 1.2px 1.2px #666d8014,0 5px 10px #666d8014;
 
     @media screen and (min-width: $break-md){
         padding: 20px 24px;
@@ -79,6 +80,7 @@ export default {
 
 .dark{
     .click-to-action{
+        box-shadow: none;
         &__slot{
             *{color: #fff !important;}
         }

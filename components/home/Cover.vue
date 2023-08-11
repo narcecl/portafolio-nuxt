@@ -86,6 +86,7 @@ export default{
             top: -52px;
             margin: auto;
             font-size: 14px;
+            color: #fff;
         }
 
         svg{
@@ -96,27 +97,31 @@ export default{
     }
 
     .custom-shape-divider-bottom-1666744919 {
-        display: none;
         position: absolute;
-        bottom: 100px;
+        bottom: 0;
         left: 0;
         width: 100%;
         overflow: hidden;
         line-height: 0;
         transform: rotate(180deg);
 
-        @media screen and (min-width: $break-sm){
-            display: block;
-        }
-
         svg {
             position: relative;
             display: block;
-            width: calc(100% + 1.3px);
+            width: calc(220% + 1.3px);
             height: 100px;
 
             .shape-fill {
-                fill: #FFFFFF;
+                fill: #f7f7f7;
+            }
+        }
+
+        @media screen and (min-width: $break-sm){
+            display: block;
+            bottom: 100px;
+
+            svg{
+                width: calc(100% + 1.3px);
             }
         }
     }
