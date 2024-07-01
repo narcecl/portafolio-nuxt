@@ -68,6 +68,16 @@ export default {
 		return {
 			projects: [
 				{
+					name: 'Grids Planner',
+					description: 'Planifica de forma visual tu feed de Instagram.',
+					image: '/images/grids-planner.jpg',
+					langs: ['REACT', 'NEXT.JS', 'HTML5', 'CSS3'],
+					links: [
+						{type: 'github', text: '', url: 'https://github.com/narcecl/grids-planner', icon: 'code'},
+						{type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.vercel.app/', full: true, icon: 'arrow-up-right-from-square', iconOrder: 2}
+					]
+				},
+				{
 					name: 'Pokédex',
 					description: 'Desarrollo de Pokédex con la lista de todos los Pokémon por generación.',
 					image: '/images/pokedex.jpg',
@@ -83,16 +93,6 @@ export default {
 					image: '/images/portafolio-22.jpg',
 					langs: ['NUXT JS', 'VUE', 'HTML5', 'CSS3'],
 					links: [{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/portafolio-nuxt', full: true, icon: 'code'}]
-				},
-				{
-					name: 'Grids Planner',
-					description: 'Organizador visual para el Feed de Instagram.',
-					image: '/images/grids-planner.jpg',
-					langs: ['VUE', 'HTML5', 'CSS3'],
-					links: [
-						{type: 'github', text: 'Ver en Github', url: 'https://github.com/narcecl/grids-planner', full: true, icon: 'code'},
-						// {type: 'primary', text: 'Ir al proyecto', url: 'https://grids-planner.herokuapp.com/', full: true, icon: 'arrow-up-right-from-square', iconOrder: 2}
-					]
 				},
 			]
 		};
